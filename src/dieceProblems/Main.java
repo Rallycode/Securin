@@ -159,7 +159,7 @@ public class Main {
 	
 	/*  APPROACH-2
      
-      brute force approcah for solving the PART - B
+      brute force approach  for solving the PART - B
       Here we iterate over each position of dieA and for each dieA the dieB also need to iterate over all positions
       
        boolean flag = false;
