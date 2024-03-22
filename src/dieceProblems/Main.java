@@ -105,15 +105,15 @@ public class Main {
 
 	
 //PART B
-Input:
-● Die_A = [1, 2, 3, 4, 5, 6] & Die B = Die_A = [1, 2, 3, 4, 5, 6]	
+//Input:
+// ● Die_A = [1, 2, 3, 4, 5, 6] & Die B = Die_A = [1, 2, 3, 4, 5, 6]	
 
-● Die A cannot have more than 4 Spots on a face.
-● Die A may have multiple faces with the same number of spots.
-● Die B can have as many spots on a face as necessary i.e. even more than 6.//
+// ● Die A cannot have more than 4 Spots on a face.
+// ● Die A may have multiple faces with the same number of spots.
+// ● Die B can have as many spots on a face as necessary i.e. even more than 6.
 
  
-//Here we are fixing the first 4 indeices of dieA and dieB as {1,2,3,4} and then check for all the remaining possibilites by applying the given constraints//
+//Here we are fixing the first 4 indeices of dieA and dieB as {1,2,3,4} and then check for all the remaining possibilites by applying the given constraints
 	
 	int[] diea = {1, 2, 3, 4, 5, 6};
         int[] dieb = {1, 2, 3, 4, 5, 6};
