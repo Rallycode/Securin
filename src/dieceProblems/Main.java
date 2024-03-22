@@ -98,6 +98,9 @@ public class Main {
 
 	//PART B
 	//Here we are fixing the first 4 indeices of dieA and dieB as {1,2,3,4} and then check for all the remaining possibilites by applying the given constraints
+	int[] diea = {1, 2, 3, 4, 5, 6};
+        int[] dieb = {1, 2, 3, 4, 5, 6};
+
 	boolean flag = false;
         for(int i = 0 ; i < 5 ; i++) {
         	
@@ -111,7 +114,10 @@ public class Main {
         			for(int l = 0 ; l < 13 ; l++) {
         				dieb[5] = l;
                         int totalCombinations = totalComb(diea, dieb);
+                        Map<Integer, List<int[]>> possibleSums = getPossibleSums(diea, dieb);
+
                         Map<Integer, Double> sumProbabilities = calculateSumProbabilities(possibleSums, totalCombinations);
+
                         
                    	System.out.println(Arrays.toString(diea) + " " + Arrays.toString(dieb));
                    	System.out.println();
