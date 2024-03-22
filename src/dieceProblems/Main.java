@@ -6,7 +6,9 @@ public class Main {
 
 	static int[][] comb = new int[6][6];
 	
-	//Q1
+
+      //Q1. How many total combinations are possible?
+	
 	public static int totalComb(int[] dieA, int[] dieB) {
 		return (dieA.length * dieB.length);
 	}	
@@ -15,7 +17,10 @@ public class Main {
         return new int[]{1, 2, 3, 4, 5, 6};
     }
 
-    //Q2
+
+      //Q2. Calculate and display the distribution of all possible combinations that can be
+      obtained when rolling both Die A and Die B together.//
+	
 	public static void possibleCombo(int[] dieA, int[] dieB) {
 		// TODO Auto-generated method stub
 		for(int i = 0 ; i < dieA.length ; i++) {
@@ -28,8 +33,11 @@ public class Main {
 			System.out.println();
 		}
 	}
-    //Q3
-    public static Map<Integer, List<int[]>> getPossibleSums(int[] dieA, int[] dieB) {
+
+
+     //Q3.Calculate the Probability of all Possible Sums occurring among the number of combinations
+   
+ public static Map<Integer, List<int[]>> getPossibleSums(int[] dieA, int[] dieB) {
         Map<Integer, List<int[]>> possibleSums = new HashMap<>();
 
         for (int faceA : dieA) {
@@ -96,8 +104,18 @@ public class Main {
         +entry.getValue() );
         }
 
-	//PART B
-	//Here we are fixing the first 4 indeices of dieA and dieB as {1,2,3,4} and then check for all the remaining possibilites by applying the given constraints
+	
+//PART B
+Input:
+● Die_A = [1, 2, 3, 4, 5, 6] & Die B = Die_A = [1, 2, 3, 4, 5, 6]	
+
+● Die A cannot have more than 4 Spots on a face.
+● Die A may have multiple faces with the same number of spots.
+● Die B can have as many spots on a face as necessary i.e. even more than 6.//
+
+ 
+//Here we are fixing the first 4 indeices of dieA and dieB as {1,2,3,4} and then check for all the remaining possibilites by applying the given constraints//
+	
 	int[] diea = {1, 2, 3, 4, 5, 6};
         int[] dieb = {1, 2, 3, 4, 5, 6};
 
@@ -137,7 +155,11 @@ public class Main {
         	System.out.println("No such possiblites");
         }
 	    
-      /*  
+      
+	
+	
+	/*  APPROACH-2
+     
       brute force approcah for solving the PART - B
       Here we iterate over each position of dieA and for each dieA the dieB also need to iterate over all positions
       
