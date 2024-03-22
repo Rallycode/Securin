@@ -18,8 +18,7 @@ public class Main {
     }
 
 
-      //Q2. Calculate and display the distribution of all possible combinations that can be
-      obtained when rolling both Die A and Die B together.//
+      //Q2. Calculate and display the distribution of all possible combinations that can be obtained when rolling both Die A and Die B together.
 	
 	public static void possibleCombo(int[] dieA, int[] dieB) {
 		// TODO Auto-generated method stub
