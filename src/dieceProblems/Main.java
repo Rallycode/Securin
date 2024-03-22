@@ -60,15 +60,6 @@ public class Main {
         return sumProbabilities;
     }
 
-//    public static void adjustDice(int[] diceA, int[] diceB, Map<Integer, Double> originalProbabilities) {
-//        for (int i = 0; i < diceA.length; i++) {
-//            int sum = diceA[i] + diceB[i];
-//            double probability = originalProbabilities.get(sum);
-//            diceA[i] = Math.min(4, (int) Math.round(probability * diceA.length));
-//            diceB[i] = Math.max(1, (int) Math.round(probability * diceB.length)); // Ensure B can be any positive value
-//        }
-//    }
-
     public static void main(String[] args) {
         int[] dieA = rollDice();
         int[] dieB = rollDice();
@@ -105,49 +96,87 @@ public class Main {
         +entry.getValue() );
         }
 
+	//PART B
+	//Here we are fixing the first 4 indeices of dieA and dieB as {1,2,3,4} and then check for all the remaining possibilites by applying the given constraints
+	boolean flag = false;
+        for(int i = 0 ; i < 5 ; i++) {
+        	
+        	diea[4] = i;
+        	for(int j = 0 ; j < 5 ; j++) {
+        		
+        		
+        		diea[5] = j;
+        		for(int  k = 0 ; k < 13 ; k++) {
+        			dieb[4] = k;
+        			for(int l = 0 ; l < 13 ; l++) {
+        				dieb[5] = l;
+                        int totalCombinations = totalComb(diea, dieb);
+                        Map<Integer, Double> sumProbabilities = calculateSumProbabilities(possibleSums, totalCombinations);
+                        
+                   	System.out.println(Arrays.toString(diea) + " " + Arrays.toString(dieb));
+                   	System.out.println();
+                        
+                     
+                        if(sumProbabilities.equals(sumProbabilitiesOriginal)) {
+                        	System.out.println(Arrays.toString(diea));
+                        	System.out.println(Arrays.toString(dieb));
+                        	flag = true;
+                        }
+        			}
+        		}
+        	}
+        }
         
-//        boolean flag = false;
-//        for (int a = 0; a <= 4; a++) {
-//            for (int b = 0; b <= 4; b++) {
-//                for (int c = 0; c <= 4; c++) {
-//                    for (int d = 0; d <= 4; d++) {
-//                        for (int e = 0; e <= 4; e++) {
-//                            for (int f = 0; f <= 4; f++) {
-//                                int[] diea = {a, b, c, d, e, f};
-//                                for (int g = 0; g <= 12; g++) {
-//                                    for (int h = 0; h <= 12; h++) {
-//                                        for (int i = 0; i <= 12; i++) {
-//                                            for (int j = 0; j <= 12; j++) {
-//                                                for (int k = 0; k <= 12; k++) {
-//                                                    for (int l = 0; l <= 12; l++) {
-//                                                        int[] dieb = {g, h, i, j, k, l};
-//                                                        int totalCombinations = totalComb(diea, dieb);
-//                                                        Map<Integer, List<int[]>> possibleSums = getPossibleSums(diea, dieb);
-//
-//                                                        Map<Integer, Double> sumProbabilities = calculateSumProbabilities(possibleSums, totalCombinations);
-//
-//                                                        // Check if the sumProbabilities match
-//                                                        if (sumProbabilities.equals(sumProbabilitiesOriginal)) {
-//                                                            System.out.println(Arrays.toString(diea)+" " + Arrays.toString(dieb));
-//                                                            flag = true;
-//                                                        }
-//                                                    }
-//                                                }
-//                                            }
-//                                        }
-//                                    }
-//                                }
-//                            }
-//                        }
-//                    }
-//                }
-//            }
-//        }
-//        if (!flag) {
-//            System.out.println("No such possibilities");
-//        }
-//    
-//    
+        if(!flag) {
+        	System.out.println("No such possiblites");
+        }
+	    
+      /*  
+      brute force approcah for solving the PART - B
+      Here we iterate over each position of dieA and for each dieA the dieB also need to iterate over all positions
+      
+       boolean flag = false;
+       for (int a = 0; a <= 4; a++) {
+           for (int b = 0; b <= 4; b++) {
+               for (int c = 0; c <= 4; c++) {
+                   for (int d = 0; d <= 4; d++) {
+                       for (int e = 0; e <= 4; e++) {
+                           for (int f = 0; f <= 4; f++) {
+                               int[] diea = {a, b, c, d, e, f};
+                               for (int g = 0; g <= 12; g++) {
+                                   for (int h = 0; h <= 12; h++) {
+                                       for (int i = 0; i <= 12; i++) {
+                                           for (int j = 0; j <= 12; j++) {
+                                               for (int k = 0; k <= 12; k++) {
+                                                   for (int l = 0; l <= 12; l++) {
+                                                       int[] dieb = {g, h, i, j, k, l};
+                                                       int totalCombinations = totalComb(diea, dieb);
+                                                       Map<Integer, List<int[]>> possibleSums = getPossibleSums(diea, dieb);
+
+                                                       Map<Integer, Double> sumProbabilities = calculateSumProbabilities(possibleSums, totalCombinations);
+
+                                                       // Check if the sumProbabilities match
+                                                       if (sumProbabilities.equals(sumProbabilitiesOriginal)) {
+                                                           System.out.println(Arrays.toString(diea)+" " + Arrays.toString(dieb));
+                                                           flag = true;
+                                                       }
+                                                   }
+                                               }
+                                           }
+                                       }
+                                   }
+                               }
+                           }
+                       }
+                   }
+               }
+           }
+       }
+       if (!flag) {
+           System.out.println("No such possibilities");
+       }
+   */
+   
     
     }
 
