@@ -76,7 +76,7 @@ public class Main {
         Map<Integer, List<int[]>> possibleSumsOrg = getPossibleSums(dieA, dieB);
 
 
-        //PART - B
+        
         System.out.println("Possible Sums and Combinations:");
         for (Map.Entry<Integer, List<int[]>> entry : possibleSumsOrg.entrySet()) {
             int totalSum = entry.getKey();
