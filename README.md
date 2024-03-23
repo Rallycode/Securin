@@ -35,5 +35,4 @@ A Transform Function `undoom_dice` that takes `(Die_A, Die_B)` as input & output
 ## OUTPUT
 ![image](https://github.com/Rallycode/Securin/assets/122144615/ae11eefe-18db-46c3-83f5-bb127612a864)
 ![image](https://github.com/Rallycode/Securin/assets/122144615/6c8851ba-01f7-4167-9b9a-124dc495939e)
-![image](https://github.com/Rallycode/Securin/assets/122144615/11a4e632-a6a7-49f7-8c30-738e4568ff05)
 ![image](https://github.com/Rallycode/Securin/assets/122144615/d4291c37-e503-4044-bd97-ec5e46e864f1)
