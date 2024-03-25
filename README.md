@@ -11,7 +11,7 @@
 ## OUTPUT
 ![image](https://github.com/Rallycode/Securin/assets/122144615/412f8d04-1817-485b-9d5d-7965a41a6b41)
 # PART B
-## [Loki Doomed Dice Problem](https://github.com/Rallycode/Securin/blob/main/src/partB/Question1ByDynamicProgramming----.java)
+## [Loki Doomed Dice Problem](https://github.com/Rallycode/Securin/blob/main/src/partB/Question1ByDynamicProgramming.java)
 ## Problem Statement: The Doomed Dice Challenge
 
 You have the tools to re-attach the "Spots" back on the Dice. However, Loki has doomed your dice with the following conditions:
