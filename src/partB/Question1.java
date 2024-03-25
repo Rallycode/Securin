@@ -134,3 +134,23 @@ public class Question1 {
         	System.out.println("P(X = "+ entry.getKey()+") = " + possibleSum.get(entry.getKey()).size() + "/36 = "
         +entry.getValue() );
         }
+
+        
+        //The sum probability of original dice and loki doomed dice
+        if(sumProbabilities.equals(sumProbabilitiesOriginal)) {
+        	System.out.println(Arrays.toString(diea));
+        	System.out.println(Arrays.toString(dieb));
+        	flag = true;
+        }
+  
+        
+        if(!flag) {
+        	System.out.println("No such possiblites");
+        }else {
+        	System.out.println("Yes such possiblites");
+        }
+
+		
+	}
+
+}
