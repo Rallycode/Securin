@@ -11,7 +11,7 @@
 ## OUTPUT
 ![image](https://github.com/Rallycode/Securin/assets/122144615/412f8d04-1817-485b-9d5d-7965a41a6b41)
 # PART B
-## [Loki Doomed Dice Problem](https://github.com/Rallycode/Securin/blob/main/src/partB/Question1.java)
+## [Loki Doomed Dice Problem](https://github.com/Rallycode/Securin/blob/main/src/partB/Question1ByDynamicProgramming----.java)
 ## Problem Statement: The Doomed Dice Challenge
 
 You have the tools to re-attach the "Spots" back on the Dice. However, Loki has doomed your dice with the following conditions:
@@ -30,9 +30,14 @@ But in order to play your game, the probability of obtaining the Sums must remai
 
 A Transform Function `undoom_dice` that takes `(Die_A, Die_B)` as input & outputs `New_Die_A = [?, ?, ?, ?, ?, ?], New_Die_B = [?, ?, ?, ?, ?, ?]` where, No `New_Die A[x] > 4`
 
-## APPROACH
+## APPROACH 1
+In this Approach, We implemented Dynamic Programming to solve this classic doomed dice problem
 ![image](https://github.com/Rallycode/Securin/assets/122144615/f2c7080f-85e7-4857-8e6d-8b1149cec7db)
 ## OUTPUT
+![image](https://github.com/Rallycode/Securin/assets/122144615/0da919ea-d244-47c5-bab2-848e511ba699)
+
+## APPROACH 2
+In this Approach, We get the value of Six faces of each Doomed Dice from the user, then the program verifies whether the sum of probability of the original Dice matches with sum of probability of the doomed dice. If exists, the doomed dice outcome will be printed else "No such possibilites" will be printed. 
 ![image](https://github.com/Rallycode/Securin/assets/122144615/ae11eefe-18db-46c3-83f5-bb127612a864)
 ![image](https://github.com/Rallycode/Securin/assets/122144615/a8bbe215-828e-4e1f-b47a-4191e8222014)
 ![image](https://github.com/Rallycode/Securin/assets/122144615/45ab4d90-a5d7-4e64-ba4e-41e3025aafb1)
